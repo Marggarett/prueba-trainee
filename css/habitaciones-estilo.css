@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+header {
+    background-color: #ffffff;
+    color: #0f0e0e;
+    padding: 0;
+    border-bottom: 1.5px solid #ffffff;
+}
+
+.header-container, .footer-container {
+    padding: 40px 40px;
+    background-color: #e7e7e7;
+    color: rgb(10, 10, 10);
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    padding-left: 65px; 
+    background-color: #e7e7e7;
+    color: rgb(10, 10, 10);
+    border-bottom: 1.5px solid #ffffff;
+}
+
+.flecha img {
+    width: 40px; 
+    margin-right: 10px;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.content-container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.proyecto-card {
+    background-color: #e2d8f1;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #0f0e0e;
+}
+
+.proyecto-card:hover {
+    background-color: #dce8ee;
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 20px; 
+    }
+
+    .flecha img {
+        margin: 0; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .proyecto-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .proyecto-card {
+        width: calc(100% - 20px);
+    }
+}
